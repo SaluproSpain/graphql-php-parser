@@ -5,12 +5,12 @@
 
 namespace Salupro\GraphqlParser;
 
-use PawelDziok\GraphqlParser\Ast\Argument;
-use PawelDziok\GraphqlParser\Ast\Field;
-use PawelDziok\GraphqlParser\Ast\Literal;
-use PawelDziok\GraphqlParser\Ast\Query;
-use PawelDziok\GraphqlParser\Ast\Reference;
-use PawelDziok\GraphqlParser\Ast\Variable;
+use Salupro\GraphqlParser\Ast\Argument;
+use Salupro\GraphqlParser\Ast\Field;
+use Salupro\GraphqlParser\Ast\Literal;
+use Salupro\GraphqlParser\Ast\Query;
+use Salupro\GraphqlParser\Ast\Reference;
+use Salupro\GraphqlParser\Ast\Variable;
 
 class Parser extends Tokenizer
 {
