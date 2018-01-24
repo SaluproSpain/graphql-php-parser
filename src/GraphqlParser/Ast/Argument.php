@@ -3,13 +3,13 @@
  * @author Paweł Dziok <pdziok@gmail.com>
  */
 
-namespace PawelDziok\GraphqlParser\Ast;
+namespace Salupro\GraphqlParser\Ast;
 
 
 class Argument {
 
-    private $name;
-    private $value;
+    public $name;
+    public $value;
 
     public function __construct($name, $value)
     {

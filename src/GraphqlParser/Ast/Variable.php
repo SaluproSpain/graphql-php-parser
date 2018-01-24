@@ -3,15 +3,16 @@
  * @author Paweł Dziok <pdziok@gmail.com>
  */
 
-namespace PawelDziok\GraphqlParser\Ast;
+namespace Salupro\GraphqlParser\Ast;
 
+class Variable {
 
-class Reference {
-
-    private $name;
+    public $name;
 
     public function __construct($name)
     {
         $this->name = $name;
     }
+
+
 }

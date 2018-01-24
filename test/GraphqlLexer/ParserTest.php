@@ -3,7 +3,7 @@
  * @author Paweł Dziok <pdziok@gmail.com>
  */
 
-namespace PawelDziok\GraphqlParser;
+namespace Salupro\GraphqlParser;
 
 use PawelDziok\GraphqlParser\Ast\Argument;
 use PawelDziok\GraphqlParser\Ast\Field;

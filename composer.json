@@ -11,12 +11,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "PawelDziok\\": "src/PawelDziok/"
+      "Salupro\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "PawelDziok\\": "test/PawelDziok/"
+      "Salupro\\": "test/"
     }
   },
   "require-dev": {

@@ -3,19 +3,19 @@
  * @author Paweł Dziok <pdziok@gmail.com>
  */
 
-namespace PawelDziok\GraphqlParser\Ast;
+namespace Salupro\GraphqlParser\Ast;
 
 
 class Field
 {
     /** @var string */
-    private $name;
+    public $name;
     /** @var string */
-    private $alias;
+    public $alias;
     /** @var array  */
-    private $params;
+    public $params;
     /** @var Field[] */
-    private $fields;
+    public $fields;
 
     public function __construct($name, $alias = null, $params = [], $fields = [])
     {
