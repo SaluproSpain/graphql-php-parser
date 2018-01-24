@@ -6,6 +6,6 @@
 namespace Salupro\GraphqlParser;
 
 
-class SyntaxErrorException extends \InvalidArgumentException {
+class SyntaxErrorException extends \Exception {
 
 }

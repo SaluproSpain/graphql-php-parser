@@ -5,11 +5,11 @@
 
 namespace Salupro\GraphqlParser;
 
-use PawelDziok\GraphqlParser\Ast\Argument;
-use PawelDziok\GraphqlParser\Ast\Field;
-use PawelDziok\GraphqlParser\Ast\Literal;
-use PawelDziok\GraphqlParser\Ast\Query;
-use PawelDziok\GraphqlParser\Ast\Variable;
+use Salupro\GraphqlParser\Ast\Argument;
+use Salupro\GraphqlParser\Ast\Field;
+use Salupro\GraphqlParser\Ast\Literal;
+use Salupro\GraphqlParser\Ast\Query;
+use Salupro\GraphqlParser\Ast\Variable;
 
 class ParserTest extends \PHPUnit_Framework_TestCase {
 
@@ -17,10 +17,36 @@ class ParserTest extends \PHPUnit_Framework_TestCase {
      * @dataProvider getSampleData
      */
     public function testLexingSampleQueries($rawQuery, $parsedQuery){
-     $parser = new Parser($rawQuery);
-
-        $this->assertEquals($parsedQuery, $parser->parseQuery());
+         $parser = new Parser($rawQuery);
+         $this->assertEquals($parsedQuery, $parser->parseQuery());
     }
+
+    public function testArguments()
+    {
+        $parser = new Parser('{
+    user(id: <id>) {
+      id,
+      nickname,
+      avatar(width: 80, height: 80) {
+        url(protocol: "https")
+      },
+      posts(first: <count>) {
+        count,
+        edges {
+          post: node {
+            id,
+            title,
+            published_at
+          }
+        }
+      }
+    }
+  }');
+        $parsed_query = $parser->parseQuery();
+        $params = $parsed_query->fieldList[0]->argumentsToArray();
+        $this->assertArrayHasKey('id', $params);
+    }
+
 
     public function getSampleData()
     {

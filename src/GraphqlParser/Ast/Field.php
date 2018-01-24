@@ -24,4 +24,14 @@ class Field
         $this->params = $params;
         $this->fields = $fields;
     }
+
+    public function argumentsToArray()
+    {
+        $result = [];
+        /** @var Argument $param */
+        foreach($this->params as $param) {
+            $result[$param->name] = $param->value;
+        }
+        return $result;
+    }
 }

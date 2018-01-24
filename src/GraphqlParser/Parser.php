@@ -100,22 +100,21 @@ class Parser extends Tokenizer
                 $this->expect(Token::TYPE_COMMA);
             }
 
-            $this->expect(Token::TYPE_COLON);
-            $args[$this->parseIdentifier()] = $this->parseValue();
+            $args[] = $this->parseArgument();
         }
 
         $this->expect(Token::TYPE_RPAREN);
         return $args;
     }
 
-//    public function parseArgument()
-//    {
-//        $name = $this->parseIdentifier();
-//        $this->expect(Token::TYPE_COLON);
-//        $value = $this->parseValue();
-//
-//        return [$name => $value];
-//    }
+    public function parseArgument()
+    {
+        $name = $this->parseIdentifier();
+        $this->expect(Token::TYPE_COLON);
+        $value = $this->parseValue();
+
+        return new Argument($name, $value);
+    }
 
     public function parseValue()
     {
