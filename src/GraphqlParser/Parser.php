@@ -127,12 +127,12 @@ class Parser extends Tokenizer
 
             case Token::TYPE_NUMBER:
             case Token::TYPE_STRING:
-                return new Literal($this->lex()->getData());
+                return $this->lex()->getData();
 
             case Token::TYPE_NULL:
             case Token::TYPE_TRUE:
             case Token::TYPE_FALSE:
-                return new Literal(json_encode($this->lex()->getData()));
+                return $this->lex()->getData();
         }
 
         throw $this->createUnexpected($this->lookAhead);

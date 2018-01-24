@@ -85,15 +85,15 @@ class ParserTest extends \PHPUnit_Framework_TestCase {
                                 'avatar',
                                 null,
                                 [
-                                    new Argument('width', new Literal('80')),
-                                    new Argument('height', new Literal('80'))
+                                    new Argument('width', '80'),
+                                    new Argument('height', '80')
                                 ],
                                 [
                                     new Field(
                                         'url',
                                         null,
                                         [
-                                            new Argument('protocol', new Literal('https'))
+                                            new Argument('protocol', 'https')
                                         ]
                                     )
                                 ]
