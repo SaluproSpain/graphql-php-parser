@@ -1,5 +1,5 @@
 {
-  "name": "paweldziok/graphql-php-parser",
+  "name": "salupro/graphql-php-parser",
   "description": "GraphQL PHP Lexer",
   "minimum-stability": "stable",
   "license": "proprietary",
@@ -7,6 +7,9 @@
     {
       "name": "Paweł Dziok",
       "email": "pdziok@gmail.com"
+    },
+    {
+      "name": "Salupro Spain"
     }
   ],
   "autoload": {
