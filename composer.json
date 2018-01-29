@@ -1,6 +1,7 @@
 {
   "name": "salupro/graphql-php-parser",
   "description": "GraphQL PHP Lexer",
+  "license": "MIT",
   "authors": [
     {
       "name": "Paweł Dziok",
